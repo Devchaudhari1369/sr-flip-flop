@@ -1,0 +1,21 @@
+sr flip flop
+q=int(input("Enter the value q:")) #0
+s=int(input("Enter the value s:")) #0
+
+r=int(input("Enter the value r:")) #0
+clk = int(input("Enter the value clock:"))
+
+if clk == 1:
+    if s == 1 and r == 1:
+        print("invalid")
+        q = not q
+    elif s == 1 and r == 0:
+        print("set")
+        q = 1
+    elif s == 0 and r == 1:
+        print("reset")
+        q = 0
+    else:
+        print("hold")
+
+print(q)
